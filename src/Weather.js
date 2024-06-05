@@ -12,11 +12,9 @@ export default function Weather() {
           required
           className="search-input"
         />
-        <button type="submit" className="search-button">
-          <i className="fa fa-search"></i>
-        </button>
+        <input type="submit" className="search-button" value="Search" />
       </form>
-      <div className="container">
+      <div className="co ntainer">
         <div className="current-weather row">
           <div className="temperature-container col-md-6 d-flex justify-content-start">
             <div className="current-temperature-value">20</div>
