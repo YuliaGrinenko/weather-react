@@ -15,9 +15,9 @@ export default function Weather(props) {
       wind: response.data.wind.speed,
       description: response.data.weather[0].description,
       city: response.data.name,
-      date: new Date(reponse.data.dt * 1000),
+      date: new Date(response.data.dt * 1000),
     });
-    console.log(response);
+    console.log(response.data);
   }
 
   function Search() {
@@ -54,7 +54,9 @@ export default function Weather(props) {
             </div>
             <div className="city-details col-md-6">
               <h1 className="current-city">{weatherData.city}</h1>
-              <p>Wednesday, 15:53</p>
+              <p>
+                <FormattedDate date={weatherData.date} />{" "}
+              </p>
 
               <p className="description">{weatherData.description}</p>
               <p>
