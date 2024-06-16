@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
-import FormattedDate from "./FormattedDate";
+import WeatherInfo from "./WeatherInfo";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -27,50 +27,19 @@ export default function Weather(props) {
   }
   if (weatherData.ready) {
     return (
-      <div>
-        <form className="search-form">
-          <input
-            type="search"
-            placeholder="Enter a city..."
-            required
-            autoFocus
-            className="search-input"
-          />
-          <input type="submit" className="search-button" value="Search" />
-        </form>
+      <div className="Weather">
         <div className="container">
-          <div className="current-weather row">
-            <div className="temperature-container col-md-6 d-flex justify-content-start">
-              <div className="current-temperature-value">
-                {weatherData.temperature}
-              </div>
-              <div className="current-temperature-unit">°C</div>
-              <div className="current-temperature-icon">
-                <img
-                  src="https://openweathermap.org/img/wn/02d@2x.png"
-                  alt="Weather condictions"
-                />
-              </div>
-            </div>
-            <div className="city-details col-md-6">
-              <h1 className="current-city">{weatherData.city}</h1>
-              <p>
-                <FormattedDate date={weatherData.date} />{" "}
-              </p>
-
-              <p className="description">{weatherData.description}</p>
-              <p>
-                humidity:{" "}
-                <strong className="weather-conditions">
-                  {weatherData.humidity}%
-                </strong>
-                , wind:{" "}
-                <strong className="weather-conditions">
-                  {weatherData.wind} km/h
-                </strong>
-              </p>
-            </div>
-          </div>
+          <form className="search-form">
+            <input
+              type="search"
+              placeholder="Enter a city..."
+              required
+              autoFocus
+              className="search-input"
+            />
+            <input type="submit" className="search-button" value="Search" />
+          </form>
+          <WeatherInfo data={weatherData} />
         </div>
       </div>
     );
