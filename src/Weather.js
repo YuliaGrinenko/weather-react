@@ -6,6 +6,7 @@ import WeatherInfo from "./WeatherInfo";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
+  const [city, setCity] = useState(props.defaultCity);
 
   function getResponse(response) {
     setWeatherData({
@@ -17,25 +18,32 @@ export default function Weather(props) {
       city: response.data.name,
       date: new Date(response.data.dt * 1000),
     });
-    console.log(response.data);
   }
 
   function Search() {
     let apiKey = `195c2c787bc01a377e2ef01266be08ce`;
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(getResponse);
+  }
+  function handleSubmit(event) {
+    event.preventDefault();
+    Search();
+  }
+  function changeCity(event) {
+    setCity(event.target.value);
   }
   if (weatherData.ready) {
     return (
       <div className="Weather">
         <div className="container">
-          <form className="search-form">
+          <form className="search-form" onSubmit={handleSubmit}>
             <input
               type="search"
               placeholder="Enter a city..."
               required
               autoFocus
               className="search-input"
+              onChange={changeCity}
             />
             <input type="submit" className="search-button" value="Search" />
           </form>
