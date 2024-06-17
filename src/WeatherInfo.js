@@ -11,10 +11,7 @@ export default function WeatherInfo(props) {
           </div>
           <div className="current-temperature-unit">°C</div>
           <div className="current-temperature-icon">
-            <img
-              src="https://openweathermap.org/img/wn/02d@2x.png"
-              alt="Weather condictions"
-            />
+            <img src={props.data.icon} alt="Weather condictions" />
           </div>
         </div>
         <div className="city-details col-md-6">
