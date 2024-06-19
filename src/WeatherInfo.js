@@ -1,17 +1,15 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
+import Units from "./Units";
 
 export default function WeatherInfo(props) {
   return (
     <div>
       <div className="current-weather row">
         <div className="temperature-container col-md-6 d-flex justify-content-start">
-          <div className="current-temperature-value">
-            {props.data.temperature}
-          </div>
-          <div className="current-temperature-unit">°C</div>
+          <Units celsius={props.data.temperature} />
           <div className="current-temperature-icon">
-            <img src={props.data.icon} alt="Weather condictions" />
+            <img src={props.data.icon} alt={props.data.desciption} />
           </div>
         </div>
         <div className="city-details col-md-6">

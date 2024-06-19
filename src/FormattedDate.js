@@ -20,6 +20,7 @@ export default function FormattedDate(props) {
   ];
   let day = days[props.date.getDay()];
   return (
+    
     <div>
       {day}, {hours}:{minutes}
     </div>
