@@ -3,6 +3,7 @@ import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -17,8 +18,10 @@ export default function Weather(props) {
       description: response.data.weather[0].description,
       city: response.data.name,
       date: new Date(response.data.dt * 1000),
+      coordinates: response.data.coord,
       icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     });
+    console.log(response.data.coord.lon);
   }
 
   function Search() {
@@ -49,6 +52,7 @@ export default function Weather(props) {
             <input type="submit" className="search-button" value="Search" />
           </form>
           <WeatherInfo data={weatherData} />
+          <WeatherForecast coordinates={weatherData.coordinates} />
         </div>
       </div>
     );

@@ -15,7 +15,6 @@ export default function Units(props) {
   function convertToFahrenheit() {
     return props.celsius * 1.8 + 32;
   }
-  console.log(convertToFahrenheit());
 
   if (unit === "celsius") {
     return (
