@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import WeatherForecastDay from "./WeatherForecastDay";
 
 export default function WeatherForecast(props) {
   const [loaded, setLoaded] = useState(false);
@@ -13,13 +14,7 @@ export default function WeatherForecast(props) {
 
   if (loaded) {
     console.log(forecast);
-    return (
-      <div>
-        <div>{forecast[0].dt}</div>
-        <div>{forecast[0].temp.max}</div>
-        <div>{forecast[0].temp.min}</div>
-      </div>
-    );
+    return <WeatherForecastDay data={forecast[0]} />;
   } else {
     let latitude = props.coordinates.lat;
     let longitude = props.coordinates.lon;
