@@ -15,7 +15,7 @@ export default function WeatherForecast(props) {
     console.log(forecast);
     return (
       <div>
-        <div>Day</div>
+        <div>{forecast[0].dt}</div>
         <div>{forecast[0].temp.max}</div>
         <div>{forecast[0].temp.min}</div>
       </div>
