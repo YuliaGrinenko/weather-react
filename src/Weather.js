@@ -21,7 +21,6 @@ export default function Weather(props) {
       coordinates: response.data.coord,
       icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     });
-    console.log(response.data.coord.lon);
   }
 
   function Search() {
@@ -36,6 +35,7 @@ export default function Weather(props) {
   function changeCity(event) {
     setCity(event.target.value);
   }
+
   if (weatherData.ready) {
     return (
       <div className="Weather">
