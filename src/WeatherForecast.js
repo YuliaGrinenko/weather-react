@@ -15,15 +15,36 @@ export default function WeatherForecast(props) {
     setLoaded(false);
   }, [props.coordinates]);
 
-  if (loaded) {
-    console.log(forecast);
-    return <WeatherForecastDay data={forecast[0]} />;
-  } else {
+  function load() {
     let latitude = props.coordinates.lat;
     let longitude = props.coordinates.lon;
     let apiKey = `195c2c787bc01a377e2ef01266be08ce`;
     let apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${latitude}&lon=${longitude}&exclude={part}&appid=${apiKey}&units=metric`;
 
     axios.get(apiUrl).then(getForecast);
+  }
+
+  if (loaded) {
+    return (
+      <div className="WeatherForecast">
+        <div className="row">
+          {forecast.map(function (dailyForecast, index) {
+            if (index < 5) {
+              return (
+                <div className="col" key={index}>
+                  <WeatherForecastDay data={dailyForecast} />
+                </div>
+              );
+            } else {
+              return null;
+            }
+          })}
+        </div>
+      </div>
+    );
+  } else {
+    load();
+
+    return null;
   }
 }
