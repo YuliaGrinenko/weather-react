@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
 import WeatherForecast from "./WeatherForecast";
+import "./Weather.css";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -20,7 +20,9 @@ export default function Weather(props) {
       date: new Date(response.data.dt * 1000),
       coordinates: response.data.coord,
       icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      iconCode: response.data.weather[0].icon,
     });
+    console.log(response.data.weather[0].description);
   }
 
   function Search() {

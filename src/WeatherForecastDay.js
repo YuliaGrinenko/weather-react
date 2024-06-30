@@ -17,11 +17,11 @@ export default function WeatherForecastDay(props) {
   }
 
   return (
-    <div>
-      <div> {day()}</div>
-      <div>{maxTemperature()}</div>
+    <div className="WeatherForecastDay">
+      <div className="day"> {day()}</div>
+      <span className="max-temp">{maxTemperature()}</span>
 
-      <div>{minTemperature()}</div>
+      <span className="min-temp">{minTemperature()}</span>
     </div>
   );
 }
