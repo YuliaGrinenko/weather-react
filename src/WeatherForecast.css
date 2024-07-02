@@ -8,4 +8,6 @@
 .forecast-icon {
   height: 10px;
   display: block;
+  margin: 0 auto;
+  padding: 0;
 }

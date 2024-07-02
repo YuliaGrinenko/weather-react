@@ -25,9 +25,9 @@
   padding: 50px 0 20px 0;
 }
 .current-temperature-icon {
-  width: 130px;
+  width: 110px;
   position: relative;
-  margin-top: -20px;
+  margin-top: -10px;
 }
 
 .current-temperature-value {
