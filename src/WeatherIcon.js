@@ -1,17 +1,14 @@
 import React from "react";
-import clearDayIcon from "./images/clear-day.svg";
+import clearDayIcon from "./images/01d.svg";
 import clearNightIcon from "./images/clear-night.svg";
+import cloudyDayIcon from "./images/cloudy.svg";
 
-export default function WeatherIcon({ code, alt }) {
+export default function WeatherIcon(props) {
   const codeMapping = {
     "01d": clearDayIcon,
     "01n": clearNightIcon,
+    "03d": cloudyDayIcon,
   };
-  console.log(code);
-  console.log(alt);
-  return (
-    <div>
-      <img src={codeMapping[code]} alt={alt} />
-    </div>
-  );
+
+  return <img src={codeMapping[props.code]} alt={props.alt} />;
 }

@@ -9,12 +9,14 @@ export default function WeatherInfo(props) {
   return (
     <div>
       <div className="current-weather row">
-        <div className="temperature-container col-md-6 d-flex justify-content-start">
+        <div className="temperature-container col-md-6 d-flex">
           <Units celsius={props.data.temperature} />
           <div className="current-temperature-icon">
-            <img src={props.data.icon} alt={props.data.desciption} />
+            <WeatherIcon
+              code={props.data.iconCode}
+              alt={props.data.desciption}
+            />
           </div>
-          <WeatherIcon code={props.data.iconCode} alt={props.data.desciption} />
         </div>
         <div className="city-details col-md-6">
           <h1 className="current-city">{props.data.city}</h1>

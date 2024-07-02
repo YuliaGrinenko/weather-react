@@ -18,29 +18,29 @@ export default function Units(props) {
 
   if (unit === "celsius") {
     return (
-      <div className="Units">
+      <div className="Units d-flex">
         <div className="current-temperature-value">
-          {Math.round(props.celsius)}°
+          {Math.round(props.celsius)}
         </div>
         <div className="current-temperature-unit">
-          C |{" "}
+          °C |{" "}
           <a href="/" onClick={showFahrenheit}>
-            F
+            °F
           </a>
         </div>
       </div>
     );
   } else {
     return (
-      <div className="Units">
+      <div className="Units d-flex">
         <div className="current-temperature-value">
-          {Math.round(convertToFahrenheit())}°
+          {Math.round(convertToFahrenheit())}
         </div>
         <div className="current-temperature-unit">
           <a href="/" onClick={showCelsius}>
-            C
+            °C
           </a>{" "}
-          | F
+          | °F
         </div>
       </div>
     );
