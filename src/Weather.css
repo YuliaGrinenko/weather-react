@@ -22,29 +22,31 @@
 }
 .current-weather {
   margin: 30px;
-  padding: 50px 0;
+  padding: 50px 0 20px 0;
 }
 .current-temperature-icon {
+  width: 130px;
   position: relative;
+  margin-top: -20px;
 }
 
 .current-temperature-value {
-  position: relative;
   font-size: 80px;
   font-weight: bold;
-  margin-top: -20px;
+  line-height: 70px;
 }
 .current-temperature-unit {
   font-size: 28px;
+  position: relative;
+  margin-left: 5px;
 }
 .city-details {
   text-align: right;
-  color: #ffff;
 }
 
 .current-city {
   font-size: 38px;
   font-weight: 900;
   margin-bottom: 0;
-  color: #ec6f4c;
+  color: #fab920;
 }
