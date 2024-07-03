@@ -5,8 +5,11 @@
 .WeatherForecastDay {
   padding: auto 30px;
 }
+.day {
+  color: #ff7f3e;
+}
 .forecast-icon {
-  height: 10px;
+  width: 60px;
   display: block;
   margin: 0 auto;
   padding: 0;
