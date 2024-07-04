@@ -4,6 +4,7 @@
 }
 .WeatherForecastDay {
   padding: auto 30px;
+  margin-bottom: 20px;
 }
 .day {
   color: #ff7f3e;
