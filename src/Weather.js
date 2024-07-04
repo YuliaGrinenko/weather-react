@@ -4,6 +4,8 @@ import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
 import WeatherForecast from "./WeatherForecast";
 import "./Weather.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -42,7 +44,7 @@ export default function Weather(props) {
     return (
       <div className="Weather">
         <div className="container">
-          <form className="search-form" onSubmit={handleSubmit}>
+          <form className="search-form d-flex" onSubmit={handleSubmit}>
             <input
               type="search"
               placeholder="Enter a city..."
@@ -51,7 +53,9 @@ export default function Weather(props) {
               className="search-input"
               onChange={changeCity}
             />
-            <input type="submit" className="search-button" value="Search" />
+            <button className="search-button">
+              <FontAwesomeIcon icon={faSearch} />
+            </button>
           </form>
           <WeatherInfo data={weatherData} />
           <WeatherForecast coordinates={weatherData.coordinates} />
