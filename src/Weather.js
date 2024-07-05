@@ -10,6 +10,7 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
+  const [error, setError] = useState(null);
 
   function getResponse(response) {
     setWeatherData({
@@ -24,22 +25,27 @@ export default function Weather(props) {
       icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       iconCode: response.data.weather[0].icon,
     });
-    console.log(response.data.weather[0].description);
   }
 
   function Search() {
     let apiKey = `195c2c787bc01a377e2ef01266be08ce`;
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(getResponse);
+    axios
+      .get(apiUrl)
+      .then(getResponse)
+      .catch((error) => {
+        setError();
+      });
   }
   function handleSubmit(event) {
     event.preventDefault();
     Search();
+    setError(null);
   }
+
   function changeCity(event) {
     setCity(event.target.value);
   }
-
   if (weatherData.ready) {
     return (
       <div className="Weather">
@@ -62,6 +68,8 @@ export default function Weather(props) {
         </div>
       </div>
     );
+  } else if (error) {
+    return <p>"{setError(true)}"</p>;
   } else {
     Search();
     return "Loading...";
