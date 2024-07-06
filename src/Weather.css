@@ -21,15 +21,12 @@
   background-color: #e7e5e5;
 }
 .current-weather {
-  margin: 30px;
-  margin-left: 15px;
-  margin-right: 20px;
-  padding: 50px 0 20px 0;
+  margin: 60px 0;
 }
 .current-temperature-icon {
-  min-width: 110px;
-  margin-top: -10px;
-  margin-left: 10px;
+  width: 150px;
+  position: relative;
+  margin-top: -15px;
 }
 
 .current-temperature-value {
@@ -65,11 +62,15 @@
     text-align: center;
     margin-top: 20px;
   }
-  .current-weather {
-    text-align: start;
+  .current-temperature-container {
+    text-align: center;
     margin-left: 0;
   }
   .search-input {
     margin-left: 0;
+  }
+  .current-temperature-icon {
+    display: block;
+    margin: 0 auto;
   }
 }
