@@ -13,7 +13,11 @@ export default function WeatherInfo(props) {
           <Units celsius={props.data.temperature} />
         </div>
         <div className="current-temperature-icon col-md-3">
-          <WeatherIcon code={props.data.iconCode} alt={props.data.desciption} />
+          <WeatherIcon
+            code={props.data.iconCode}
+            alt={props.data.desciption}
+            width="150px"
+          />
         </div>
         <div className="city-details col-md-6">
           <h1 className="current-city">{props.data.city}</h1>

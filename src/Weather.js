@@ -60,7 +60,7 @@ export default function Weather(props) {
               onChange={changeCity}
             />
             <button className="search-button">
-              <FontAwesomeIcon icon={faSearch} />
+              <FontAwesomeIcon icon={faSearch} className="image-fluid" />
             </button>
           </form>
           <WeatherInfo data={weatherData} />
