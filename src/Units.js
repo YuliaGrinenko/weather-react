@@ -17,6 +17,7 @@ export default function Units(props) {
   }
 
   function handleUnitClick(event) {
+    event.preventDefault();
     if (
       event.type === "click" ||
       (event.type === "touchend" && event.cancelable)
