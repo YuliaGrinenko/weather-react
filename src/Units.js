@@ -23,9 +23,9 @@ export default function Units(props) {
           {Math.round(props.celsius)}
         </div>
         <div className="current-temperature-unit">
-          °C{""} |{""}
+          °C |{" "}
           <a href="/" onClick={showFahrenheit}>
-            {""} °F
+            °F
           </a>
         </div>
       </div>
@@ -40,7 +40,7 @@ export default function Units(props) {
           <a href="/" onClick={showCelsius}>
             °C
           </a>{" "}
-          {""}| °F
+          | °F
         </div>
       </div>
     );
