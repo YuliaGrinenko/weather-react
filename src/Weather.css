@@ -39,6 +39,7 @@
 }
 .unit-button {
   border: none;
+  background-color: transparent;
 }
 
 .city-details {
@@ -53,11 +54,11 @@
   color: #ff7f3e;
 }
 
-.Units a {
+.Units button {
   color: #ffff;
   text-decoration: none;
 }
-.Units a:hover {
+.Units button:hover {
   color: #ff7f3e;
 }
 @media (max-width: 768px) {
