@@ -24,9 +24,9 @@ export default function Units(props) {
         </div>
         <div className="current-temperature-unit">
           °C |{" "}
-          <a href="/" onClick={showFahrenheit} style={{ cursor: "pointer" }}>
+          <button onClick={showFahrenheit} className="unit-button">
             °F
-          </a>
+          </button>
         </div>
       </div>
     );
@@ -37,10 +37,10 @@ export default function Units(props) {
           {Math.round(convertToFahrenheit())}
         </div>
         <div className="current-temperature-unit">
-          <a href="/" onClick={showCelsius} style={{ cursor: "pointer" }}>
+          <button onClick={showCelsius} className="unit-button">
             {" "}
             °C
-          </a>{" "}
+          </button>{" "}
           | °F
         </div>
       </div>

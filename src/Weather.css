@@ -37,6 +37,10 @@
   font-size: 28px;
   line-height: 70px;
 }
+.unit-button {
+  border: none;
+}
+
 .city-details {
   text-align: right;
   line-height: 30px;
