@@ -4,8 +4,6 @@ import Units from "./Units";
 import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherInfo(props) {
-  console.log(props.data.desciption);
-
   return (
     <div>
       <div className="current-weather row">
