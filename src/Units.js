@@ -4,9 +4,11 @@ export default function Units(props) {
   const [unit, setUnit] = useState("celsius");
 
   function showFahrenheit(event) {
+    event.preventDefault();
     setUnit("fahrenheit");
   }
   function showCelsius(event) {
+    event.preventDefault();
     setUnit("celsius");
   }
 
@@ -14,19 +16,6 @@ export default function Units(props) {
     return props.celsius * 1.8 + 32;
   }
 
-  function handleUnitClick(event) {
-    event.preventDefault();
-    if (
-      event.type === "click" ||
-      (event.type === "touchend" && event.cancelable)
-    ) {
-      if (unit === "celsius") {
-        showFahrenheit(event);
-      } else {
-        showCelsius(event);
-      }
-    }
-  }
   if (unit === "celsius") {
     return (
       <div className="Units">
@@ -35,12 +24,7 @@ export default function Units(props) {
         </div>
         <div className="current-temperature-unit">
           °C |{" "}
-          <a
-            href="/"
-            onClick={showFahrenheit}
-            onTouchEnd={handleUnitClick}
-            style={{ cursor: "pointer" }}
-          >
+          <a href="/" onClick={showFahrenheit} style={{ cursor: "pointer" }}>
             °F
           </a>
         </div>
@@ -53,12 +37,8 @@ export default function Units(props) {
           {Math.round(convertToFahrenheit())}
         </div>
         <div className="current-temperature-unit">
-          <a
-            href="/"
-            onClick={showCelsius}
-            onTouchEnd={handleUnitClick}
-            style={{ cursor: "pointer" }}
-          >
+          <a href="/" onClick={showCelsius} style={{ cursor: "pointer" }}>
+            {" "}
             °C
           </a>{" "}
           | °F
