@@ -23,7 +23,7 @@ export default function Units(props) {
           {Math.round(props.celsius)}
         </div>
         <div className="current-temperature-unit">
-          °C |{" "}
+          °C |
           <button onClick={showFahrenheit} className="unit-button">
             °F
           </button>
@@ -38,9 +38,8 @@ export default function Units(props) {
         </div>
         <div className="current-temperature-unit">
           <button onClick={showCelsius} className="unit-button">
-            {" "}
             °C
-          </button>{" "}
+          </button>
           | °F
         </div>
       </div>
