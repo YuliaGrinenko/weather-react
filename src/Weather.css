@@ -37,10 +37,6 @@
   font-size: 28px;
   line-height: 70px;
 }
-.unit-button {
-  border: none;
-  background-color: transparent;
-}
 
 .city-details {
   text-align: right;
@@ -54,11 +50,11 @@
   color: #ff7f3e;
 }
 
-.Units button {
+.Units a {
   color: #ffff;
   text-decoration: none;
 }
-.Units button:hover {
+.Units a:hover {
   color: #ff7f3e;
 }
 @media (max-width: 768px) {
