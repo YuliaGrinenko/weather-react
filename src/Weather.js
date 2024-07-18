@@ -11,6 +11,7 @@ export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
   const [error, setError] = useState(null);
+  const [unit, setUnit] = useState("celsius");
 
   function getResponse(response) {
     setWeatherData({
@@ -63,8 +64,12 @@ export default function Weather(props) {
               <FontAwesomeIcon icon={faSearch} className="image-fluid" />
             </button>
           </form>
-          <WeatherInfo data={weatherData} />
-          <WeatherForecast coordinates={weatherData.coordinates} />
+          <WeatherInfo data={weatherData} unit={unit} setUnit={setUnit} />
+          <WeatherForecast
+            coordinates={weatherData.coordinates}
+            unit={unit}
+            setUnit={setUnit}
+          />
         </div>
       </div>
     );
