@@ -3,7 +3,11 @@
 .App {
   font-family: "Montserrat", sans-serif;
   text-align: center;
-  background: linear-gradient(to top, #09203f 0%, #537895 100%);
+  background: linear-gradient(
+    91.7deg,
+    rgb(50, 25, 79) -4.3%,
+    rgb(122, 101, 149) 101.8%
+  );
   max-width: 800px;
   margin: 60px auto;
   color: #ffff;
@@ -19,5 +23,5 @@
   margin-top: 30px;
 }
 .App .footer a:hover {
-  color: #ff7f3e;
+  color: #fabc41;
 }
