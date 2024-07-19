@@ -1,21 +1,24 @@
 .search-input {
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
   padding: 10px;
-  background: #ffff;
+  background: #fff;
   color: rgba(39, 33, 66, 0.8);
-  margin-left: 20px;
-  width: 75%;
+  width: 50%;
 }
 .search-button {
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
   color: rgba(39, 33, 66, 0.8);
   background: #ffff;
   cursor: pointer;
   transition: all 200ms ease;
-  margin-left: 10px;
   width: 15%;
+  margin-left: 0;
 }
 .search-button:hover {
   background-color: #e7e5e5;
@@ -67,7 +70,7 @@
     margin-left: 0;
   }
   .search-input {
-    margin-left: 0;
+    width: 80%;
   }
   .current-temperature-icon {
     display: block;

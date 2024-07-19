@@ -51,7 +51,10 @@ export default function Weather(props) {
     return (
       <div className="Weather">
         <div className="container">
-          <form className="search-form d-flex" onSubmit={handleSubmit}>
+          <form
+            className="search-form d-flex justify-content-center"
+            onSubmit={handleSubmit}
+          >
             <input
               type="search"
               placeholder="Enter a city..."
@@ -61,7 +64,7 @@ export default function Weather(props) {
               onChange={changeCity}
             />
             <button className="search-button">
-              <FontAwesomeIcon icon={faSearch} className="image-fluid" />
+              <FontAwesomeIcon icon={faSearch} />
             </button>
           </form>
           <WeatherInfo data={weatherData} unit={unit} setUnit={setUnit} />
