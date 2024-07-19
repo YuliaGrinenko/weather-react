@@ -7,17 +7,17 @@ export default function WeatherForecastDay(props) {
     let temperature = Math.round(props.data.temp.max);
     if (props.unit === "fahrenheit") {
       temperature = Math.round((temperature * 9) / 5 + 32);
-      return `${temperature}`;
+      return `${temperature}°`;
     }
-    return `${temperature}`;
+    return `${temperature}°`;
   }
   function minTemperature() {
     let temperature = Math.round(props.data.temp.min);
     if (props.unit === "fahrenheit") {
       temperature = Math.round((temperature * 9) / 5 + 32);
-      return `${temperature}`;
+      return `${temperature}°`;
     }
-    return `${temperature}`;
+    return `${temperature}°`;
   }
   function day() {
     let date = new Date(props.data.dt * 1000);
