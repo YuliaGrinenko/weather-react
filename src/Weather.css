@@ -47,7 +47,7 @@
   font-size: 38px;
   font-weight: 900;
   margin-bottom: 0;
-  color: #ff7f3e;
+  color: #fabc41;
 }
 
 .Units a {
@@ -55,12 +55,12 @@
   text-decoration: none;
 }
 .Units a:hover {
-  color: #ff7f3e;
+  color: #fabc41;
 }
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .city-details {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 0;
   }
   .current-temperature-container {
     text-align: center;
