@@ -1,32 +1,33 @@
-button {
+input {
   border: none;
-  border-radius: 5px;
-  color: #fdc2b0;
+  border-radius: 8px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  padding: 10px;
+  background: #fff;
+  color: rgba(39, 33, 66, 0.8);
+  width: 100%;
+}
+
+input:focus {
+  outline: 0;
+}
+
+button {
+  font-family: "Montserrat", sans-serif;
+  border: none;
+  border-radius: 6px;
+  color: rgba(39, 33, 66, 0.8);
+  background: #ffff;
+  cursor: pointer;
+  transition: all 200ms ease;
+  width: 100%;
+  margin-left: 0px;
   padding: 10px;
 }
 button:focus {
   outline: 0;
 }
-fa-search {
-  color: #fdc2b0;
-  margin: 5px;
-}
-input {
-  border-radius: 5px;
-  color: white;
-  margin-right: 0;
-  padding: 5px;
-  width: 80%;
-}
-input:focus {
-  box-shadow: 0 0 0 0.1rem #fdb99d;
-  outline: 0;
-}
-input::placeholder {
-  color: white;
-  opacity: 0.5;
-}
-
 .current-weather {
   margin: 60px 0;
 }
