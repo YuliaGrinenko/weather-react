@@ -84,7 +84,7 @@ button:focus {
     width: 100%;
   }
   button {
-    text-align: start;
+    margin-right: 15px;
   }
   .current-temperature-icon {
     display: block;
