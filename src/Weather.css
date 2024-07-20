@@ -6,7 +6,8 @@
   padding: 10px;
   background: #fff;
   color: rgba(39, 33, 66, 0.8);
-  width: 50%;
+  width: 100%;
+  margin-right: 0;
 }
 .search-input:focus {
   outline: 0;
@@ -14,6 +15,7 @@
 
 .search-button {
   border: none;
+  padding: 10px;
   border-radius: 8px;
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
@@ -21,8 +23,9 @@
   background: #ffff;
   cursor: pointer;
   transition: all 200ms ease;
-  width: 15%;
   margin-left: 0;
+  width: 100%;
+  text-align: left;
 }
 
 .current-weather {
