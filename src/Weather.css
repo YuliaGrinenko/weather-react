@@ -1,8 +1,14 @@
+.search-form {
+  background: #fff;
+  border: none;
+  border-radius: 8px;
+  width: 80%;
+  margin: 0 auto;
+}
+
 input {
   border: none;
   border-radius: 8px;
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
   padding: 10px;
   background: #fff;
   color: rgba(39, 33, 66, 0.8);
@@ -21,9 +27,10 @@ button {
   background: #ffff;
   cursor: pointer;
   transition: all 200ms ease;
-  width: 100%;
+  width: 10%;
   margin-left: 0px;
   padding: 10px;
+  text-align: center;
 }
 button:focus {
   outline: 0;
@@ -74,8 +81,9 @@ button:focus {
     text-align: center;
     margin-left: 0;
   }
-  .search-input {
-    width: 80%;
+  .search-form {
+    padding-right: 30px;
+    width: 100%;
   }
   .current-temperature-icon {
     display: block;
