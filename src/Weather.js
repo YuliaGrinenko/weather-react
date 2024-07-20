@@ -63,7 +63,7 @@ export default function Weather(props) {
               </div>
               <div className="col-3 ms-0">
                 <button className="button">
-                  <FontAwesomeIcon icon={faSearch} />
+                  <FontAwesomeIcon icon={faSearch} className="fa-search" />
                 </button>
               </div>
             </div>

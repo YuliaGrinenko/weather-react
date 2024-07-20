@@ -5,7 +5,9 @@
   width: 80%;
   margin: 0 auto;
 }
-
+.fa-search {
+  padding-right: 30px;
+}
 input {
   border: none;
   border-radius: 8px;
@@ -82,7 +84,6 @@ button:focus {
     margin-left: 0;
   }
   .search-form {
-    padding-right: 30px;
     width: 100%;
   }
   .current-temperature-icon {
