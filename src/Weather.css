@@ -82,6 +82,7 @@ button:focus {
   }
   .search-form {
     width: 100%;
+    padding-right: 0;
   }
   .current-temperature-icon {
     display: block;
