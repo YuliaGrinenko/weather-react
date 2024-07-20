@@ -71,6 +71,7 @@
   }
   .search-input {
     width: 80%;
+    border-radius: 0 !important;
   }
   .current-temperature-icon {
     display: block;
