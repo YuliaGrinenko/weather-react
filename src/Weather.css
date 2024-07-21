@@ -14,9 +14,7 @@ input {
   width: 100%;
 }
 .svg-inline--fa {
-  display: inline-block;
-  margin: 0 auto;
-  margin-right: 10px;
+  margin-right: 40px;
 }
 
 input:focus {
@@ -31,7 +29,7 @@ button {
   background: #ffff;
   cursor: pointer;
   transition: all 200ms ease;
-  width: 10%;
+  width: 20%;
   margin-left: 0px;
   padding: 10px;
   text-align: center;
