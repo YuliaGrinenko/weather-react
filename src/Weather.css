@@ -15,7 +15,6 @@ input {
 }
 .svg-inline--fa {
   display: inline-block;
-  padding: 0 10px;
 }
 
 input:focus {
