@@ -91,4 +91,7 @@ button:focus {
     display: block;
     margin: 0 auto;
   }
+  .container {
+    padding: 0;
+  }
 }
